@@ -1,0 +1,30 @@
+{
+  "name": "shopping-list-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+  "dev": "nodemon --exec tsx src/server.ts"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokuphiwa02/Shopping-List-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nokuphiwa02/Shopping-List-Backend/issues"
+  },
+  "homepage": "https://github.com/nokuphiwa02/Shopping-List-Backend#readme",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.23.13"
+  }
+}
