@@ -1,14 +1,21 @@
 import http, { IncomingMessage, ServerResponse } from "http";
+import { itemsRoute } from "./routes/items";
 
-const PORT = 4000;
+const PORT = 4005;
 
 const requestItem = (req: IncomingMessage, res: ServerResponse) => {
-    res.writeHead(200, {  "content-type": "application/json"});
-    res.end(JSON.stringify({ message: "Hello World" }));
-}
+    console.log(req.url, 'url')
+    if (req.url?.startsWith("/items")) {
+        itemsRoute(req, res);
+    }else{
+      res.writeHead(200, { "content-type": "application/json" });
+      res.end(JSON.stringify({ message: "Hello World" }));
+    }
+};
+
 
 const server = http.createServer(requestItem);
 
-server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  server.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

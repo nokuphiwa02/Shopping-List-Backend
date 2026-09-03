@@ -9,14 +9,13 @@ export const getItems = (): Item[] => {
 };
 
 export const getItemById = (id: number): Item | undefined => {
-  const item = Items.find((item) => item.id === id);
+   const item = Items.find((item) => item.id === id);
 
-  return item;
-};
+   return item;
+}
 
-export const addItem = (name: string,quantity: number,price: number,): Item => {
-    
-  const newItem: Item = { id: currentId++, name, quantity, price };
-  Items.push(newItem);
-  return newItem;
-};
+export const addItem = (name: string, quantity: number, price: number): Item => {
+    const newItem: Item = {id: currentId++, name, quantity, price};
+    Items.push(newItem);
+    return newItem;
+}
