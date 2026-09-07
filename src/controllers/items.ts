@@ -28,6 +28,15 @@ if(!item) return undefined;
 if(updates.name !== undefined) item.name = updates.name;
 if(updates.price !== undefined) item.price = updates.price;
 if(updates.quantity !== undefined) item.quantity = updates.quantity;
-
 return item;
 }
+
+export const deleteItem = (id: number): Item | undefined => {
+    const item = Items.find(item => item.id === id);
+    if (!item) {
+        return undefined;
+    }
+    Items = Items.filter(item => item.id !== id);
+   return item;
+};
+
