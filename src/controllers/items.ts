@@ -31,6 +31,7 @@ export const updateItem = (
   if (updates.name !== undefined) item.name = updates.name;
   if (updates.price !== undefined) item.price = updates.price;
   if (updates.quantity !== undefined) item.quantity = updates.quantity;
+  if (updates.purchased !== undefined) item.purchased = updates.purchased;
   return item;
 };
 
