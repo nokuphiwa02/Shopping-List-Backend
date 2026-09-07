@@ -14,13 +14,9 @@ export const getItemById = (id: number): Item | undefined => {
   return item;
 };
 
-export const addItem = (
-  name: string,
-  quantity: number,
-  price: number,
-  purchased: boolean = false,
+export const addItem = (name: string, quantity: number,price: number,purchased: boolean = false,
 ): Item => {
-  const newItem: Item = { id: currentId++, name, quantity, price };
+  const newItem: Item = { id: currentId++, name, quantity, price, purchased};
   Items.push(newItem);
   return newItem;
 };
