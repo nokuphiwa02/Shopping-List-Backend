@@ -1,3 +1,5 @@
+<img src="https://socialify.git.ci/nokuphiwa02/Shopping-List-Backend/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="Shopping-List-Backend" width="640" height="320" />
+
 ## project overview
 -The Shopping item backend is a Node.js backend application design to manage shopping items.
  it provides an API that allows users to create ,read, update and delete shopping items . 
