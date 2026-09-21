@@ -1,31 +1,37 @@
 <img src="https://socialify.git.ci/nokuphiwa02/Shopping-List-Backend/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="Shopping-List-Backend" width="640" height="320" />
 
-## project overview
--The Shopping item backend is a Node.js backend application design to manage shopping items.
- it provides an API that allows users to create ,read, update and delete shopping items . 
- Each item can contain information such as its name ,quantity and price.
+Shopping List BackendThe Shopping List Backend is a Node.js and TypeScript application designed to manage shopping items. It provides a RESTful API to create, read, update, and delete (CRUD) shopping items, tracking essential details like name, quantity, and price.
 
-## Installation and setup
--install Node.js
--open new Terminal(npm install)
--to run project (npm run dev)
--http://localhost:4005
+## 🛠️ Tech StackRuntime:
+Node.jsLanguage: TypeScript
 
-## Teck stack
--Node.js
--Type script
+## 📥 Installation & SetupClone the repository
+https://github.com
+cd Shopping-List-Backend
+.Install dependencies:Open your terminal and run:bashnpm install
+.Run the project:Start the development server:bashnpm run dev
+.The server will run locally at: http://localhost:4005
 
-## API EndPoints
--GET shopping item - Read all items
--GET :id  shopping item - Read one item
--POST - create an item
--PUT :id - update an item
--DELETE :id - delete  item
+## 🛣️ API EndpointsShoppingItems 
+Method ,Endpoint ,Description,
+GET/ (or /items)Read all shopping items,
+GET/:id Read a specific shopping item ,
+IDPOST/ (or /items)Create a new shopping
+itemPUT/:idUpdate an existing shopping item
+IDDELETE/:idDelete a shopping item 
 
-## Error Handling
--Create : Post (Success: 201 created, 200 ok & ERRORS : 400 bad request ,409 conflict)
--Read : Get (success: 200 ok & Errors 404 not found / 401 login required)
--Update : Put (success: 200 ok / 204 content delete & Errors 404 login required  / 400 bad request )
--Delete : Delete (success: 200 ok /204 content delete & Errors 404 not found / 403 forbiden)
+## 🚨 Error & Status Handling
+Create(POST)201 Created / 200 OK: Item successfully created.
+400 Bad Request: Missing required fields or invalid data structure.
+409 Conflict: Item already exists. 
+Read(GET)200 OK: Items retrieved successfully.
+401 Unauthorized: Login required to view items.
+404 Not Found: The requested item ID does not exist.
+Update (PUT)200 OK / 204 No Content: Item successfully updated.
+400 Bad Request: Invalid update data payload.
+404 Not Found (or 401 Unauthorized): Login required or item not found.
+Delete (DELETE)200 OK / 204 No Content: Item successfully deleted.
+403 Forbidden: You do not have permission to delete this item.
+404 Not Found: Item not found.
 
 -https://github.com/nokuphiwa02/Shopping-List-Backend
