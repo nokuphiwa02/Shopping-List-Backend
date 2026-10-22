@@ -22,11 +22,8 @@ export const itemsRoute = async (req: IncomingMessage, res: ServerResponse) => {
       return;
     }
     if (req.method === "GET" && id) {
-      // const item = getItemById(id);
-      // res.writeHead(item? 200: 404, { 'Content-Type': 'application/json' });
-      // res.end(JSON.stringify(item || { message: "Item not found" }));
-      // return;
-      if (!isNaN(id)) {
+      
+      if (isNaN(id)) {
         res.writeHead(400, { "Content-Type": "application/json" });
         res.end(JSON.stringify({ error: "Item not found" }));
         return;
